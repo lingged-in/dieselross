@@ -10,7 +10,7 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] Update fix_plan.md with project-specific tasks (this loop)
 - [x] SEO & Meta Tags — add meta descriptions, Open Graph, canonical, JSON-LD to all 4 pages (Req. 3)
 - [x] Accessibility Improvements — ARIA roles, aria-expanded, keyboard focus styles (Req. 4)
-- [ ] Gallery Lightbox — vanilla JS lightbox with XP styling, keyboard nav (Req. 2)
+- [x] Gallery Lightbox — vanilla JS lightbox with XP styling, keyboard nav (Req. 2)
 
 ## Medium Priority
 
@@ -31,6 +31,7 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] Update fix_plan.md with project-specific tasks
 - [x] SEO & Meta Tags
 - [x] Accessibility Improvements
+- [x] Gallery Lightbox
 
 ## Notes
 
