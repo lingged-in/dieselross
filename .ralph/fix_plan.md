@@ -15,8 +15,8 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] Images on start page are not tall enough and seem to slim. photos are uploaded ina 16:9 format which the placeholders should reflect.
 - [x] The tractor icon on the start page has to be removed
 - [x] Responsiveness of the about this tractor page is still not good. rework that page responsiveness. the images behave strangely
-- [ ] The about this tractor page needs to be renamed into "Über den F12"
-- [ ] When on the start page, the subtitles / submenus shown from the about this tractor and restauration are very different from the submenus when you enter that specific page. unify the subheadings to reflect the real subheadings of that page. Actually, the menu on the left should always be the same wiwth the specific page / subheading highlighted. the same style as it is now but with all the pages.
+- [x] The about this tractor page needs to be renamed into "Über den F12"
+- [x] When on the start page, the subtitles / submenus shown from the about this tractor and restauration are very different from the submenus when you enter that specific page. unify the subheadings to reflect the real subheadings of that page. Actually, the menu on the left should always be the same wiwth the specific page / subheading highlighted. the same style as it is now but with all the pages.
 
 ## Medium Priority
 

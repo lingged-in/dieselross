@@ -289,6 +289,60 @@ document.querySelector('.xp-btn-close')?.addEventListener('click', function () {
   });
 })();
 
+// ---- Scroll-spy: highlight nav sub-link for the visible section ----
+// Works on any page that has nav links pointing to local anchors (#id).
+// The page-level "active" link (set in HTML per page) is never removed.
+(function () {
+  // Collect nav links that target a local anchor on the current page
+  var anchors = {};
+  document.querySelectorAll('.xp-nav-link[href^="#"]').forEach(function (link) {
+    var id = link.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (target) anchors[id] = link;
+  });
+
+  if (!Object.keys(anchors).length) return;
+  if (!window.IntersectionObserver) return;
+
+  var currentId = null;
+
+  // If the URL already has a hash on load, pre-highlight that section
+  var hashId = (location.hash || '').slice(1);
+  if (hashId && anchors[hashId]) {
+    anchors[hashId].classList.add('active');
+    currentId = hashId;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    // Pick the entry with the largest intersection ratio that is intersecting
+    var best = null;
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+      }
+    });
+    if (!best) return;
+
+    var newId = best.target.id;
+    if (newId === currentId) return;
+
+    // Remove active from previous sub-link (but never touch the page-level link)
+    if (currentId && anchors[currentId]) {
+      anchors[currentId].classList.remove('active');
+    }
+    anchors[newId].classList.add('active');
+    currentId = newId;
+  }, {
+    // Trigger when top ~30% of viewport is crossed — feels natural while scrolling
+    rootMargin: '-10% 0px -60% 0px',
+    threshold: 0
+  });
+
+  Object.keys(anchors).forEach(function (id) {
+    observer.observe(document.getElementById(id));
+  });
+})();
+
 // ---- Taskbar app button highlight for current page ----
 (function () {
   const apps = document.querySelectorAll('.xp-taskbar-app');
