@@ -1558,6 +1558,36 @@ p {
   margin-left: 6px;
 }
 
+/* Impressum placeholder fields */
+.impressum-placeholder {
+  display: inline-block;
+  background: #FFF8E8;
+  border: 1px dashed #C8A000;
+  color: #806000;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-style: italic;
+}
+
+/* Status bar Impressum link */
+.xp-status-impressum {
+  padding: 0 8px;
+  border-right: 1px solid #ACA899;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.xp-status-impressum a {
+  color: var(--fg-text);
+  text-decoration: none;
+}
+
+.xp-status-impressum a:hover {
+  text-decoration: underline;
+  color: var(--fg-dark);
+}
+
 .separator {
   height: 1px;
   background: linear-gradient(to right, transparent, #C0C8DC, transparent);
