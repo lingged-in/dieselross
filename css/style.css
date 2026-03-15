@@ -939,16 +939,16 @@ p {
 .featured-image-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
   margin: 16px 0;
 }
 
-/* Featured row uses a fixed height instead of aspect-ratio so the images
-   don't scale with window width. */
+/* Featured row uses 16:9 aspect ratio to match actual photo format.
+   min-height ensures images are never too short on narrow screens. */
 .featured-image-row .img-placeholder {
-  aspect-ratio: unset;
-  min-height: 180px;
-  max-height: 260px;
+  aspect-ratio: 16 / 9;
+  min-height: 160px;
+  max-height: unset;
 }
 
 /* ===== ÜBER DEN TRAKTOR PAGE ===== */

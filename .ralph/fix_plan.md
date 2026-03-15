@@ -11,19 +11,25 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] SEO & Meta Tags — add meta descriptions, Open Graph, canonical, JSON-LD to all 4 pages (Req. 3)
 - [x] Accessibility Improvements — ARIA roles, aria-expanded, keyboard focus styles (Req. 4)
 - [x] Gallery Lightbox — vanilla JS lightbox with XP styling, keyboard nav (Req. 2)
+- [x] Design and Color - Fendt and Dieselross color theme.
+- [x] Images on start page are not tall enough and seem to slim. photos are uploaded ina 16:9 format which the placeholders should reflect.
+- [x] The tractor icon on the start page has to be removed
+- [ ] Responsiveness of the about this tractor page is still not good. rework that page responsiveness. the images behave strangely
+- [ ] The about this tractor page needs to be renamed into "Über den F12"
+- [ ] When on the start page, the subtitles / submenus shown from the about this tractor and restauration are very different from the submenus when you enter that specific page. unify the subheadings to reflect the real subheadings of that page. Actually, the menu on the left should always be the same wiwth the specific page / subheading highlighted. the same style as it is now but with all the pages.
 
 ## Medium Priority
 
 - [x] 404 Page — `404.html` with full XP chrome, German error dialog (Req. 6)
-- [ ] Impressum & Datenschutz — `impressum.html` skeleton, link in status bar (Req. 8)
-- [ ] Technical Specifications — research and fill Fendt F12GH specs, remove placeholder-tag spans (Req. 1)
-- [ ] Historical Content — write factual paragraph about Fendt production in Marktoberdorf 1950s (Req. 9)
+- [x] Impressum & Datenschutz — `impressum.html` skeleton, link in status bar (Req. 8)
+- [x] Technical Specifications — research and fill Fendt F12GH specs, remove placeholder-tag spans (Req. 1)
+- [x] Historical Content — write factual paragraph about Fendt production in Marktoberdorf 1950s (Req. 9)
 
 ## Low Priority
 
-- [ ] Favicon — SVG/ICO tractor icon, link on all pages (Req. 5)
-- [ ] Image Lazy Loading — add loading="lazy", width/height attrs to img tags (Req. 7)
-- [ ] HTML Validation & Cleanup — fix errors, consistent semantic elements, no duplicate IDs (Req. 10)
+- [x] Favicon — SVG/ICO tractor icon, link on all pages (Req. 5)
+- [x] Image Lazy Loading — add loading="lazy", width/height attrs to img tags (Req. 7)
+- [x] HTML Validation & Cleanup — fix errors, consistent semantic elements, no duplicate IDs (Req. 10)
 
 ## Completed
 
@@ -33,6 +39,12 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] Accessibility Improvements
 - [x] Gallery Lightbox
 - [x] 404 Page
+- [x] Technical Specifications
+- [x] Impressum & Datenschutz
+- [x] Historical Content
+- [x] Favicon
+- [x] Image Lazy Loading
+- [x] HTML Validation & Cleanup
 
 ## Notes
 
