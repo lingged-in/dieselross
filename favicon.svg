@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background: Fendt green -->
+  <rect width="32" height="32" rx="4" fill="#3E7828"/>
+
+  <!-- Tractor side-profile (white) -->
+
+  <!-- Exhaust stack -->
+  <rect x="7" y="7" width="2.5" height="7" rx="1" fill="white"/>
+
+  <!-- Engine hood -->
+  <rect x="6" y="14" width="9" height="5" rx="1" fill="white"/>
+
+  <!-- Cab body -->
+  <rect x="15" y="11" width="8" height="8" rx="1" fill="white"/>
+
+  <!-- Chassis (horizontal bar connecting cab to front) -->
+  <rect x="6" y="18" width="17" height="3" rx="0.5" fill="white"/>
+
+  <!-- Large rear wheel (right) -->
+  <circle cx="21" cy="24" r="6" fill="#3E7828" stroke="white" stroke-width="2.5"/>
+  <circle cx="21" cy="24" r="1.5" fill="white"/>
+
+  <!-- Small front wheel (left) -->
+  <circle cx="8" cy="26" r="4" fill="#3E7828" stroke="white" stroke-width="2"/>
+  <circle cx="8" cy="26" r="1" fill="white"/>
+</svg>
