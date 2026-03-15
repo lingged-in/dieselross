@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap');
+
 /* ============================================================
    DIESELROSS.LI — Windows XP Luna Theme Stylesheet
    ============================================================ */
@@ -27,7 +29,7 @@
 /* Base */
 html, body {
   height: 100%;
-  font-family: Tahoma, 'MS Sans Serif', Arial, sans-serif;
+  font-family: 'Lato', Tahoma, Arial, sans-serif;
   font-size: 11px;
   background-color: var(--fg-dark);
   overflow: hidden;
@@ -609,9 +611,10 @@ html, body {
 }
 
 .page-header h1 {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 18px;
   color: var(--fg-text);
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 2px;
 }
 
@@ -622,6 +625,7 @@ html, body {
 
 /* Section headings */
 h2 {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 14px;
   color: var(--fg-text);
   margin: 20px 0 8px 0;
@@ -630,6 +634,7 @@ h2 {
 }
 
 h3 {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 12px;
   color: var(--fg-dark);
   margin: 14px 0 6px 0;
