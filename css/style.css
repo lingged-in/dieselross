@@ -720,11 +720,11 @@ p {
   aspect-ratio: 4 / 3;
   min-height: 90px;
   position: relative;
-  /* Explicit width prevents aspect-ratio + min-height from expanding the element
-     beyond its container when the two constraints conflict */
+  /* width: 100% + max-width: 100% keep the placeholder inside its grid/flex cell.
+     No max-height: letting aspect-ratio govern height avoids the visual glitch where
+     max-height would clamp the height without correspondingly shrinking the width. */
   width: 100%;
   max-width: 100%;
-  max-height: 300px;
   overflow: hidden;
 }
 
@@ -1548,6 +1548,34 @@ p {
    and the nav pane becomes a horizontal tab strip.
    Desktop styles above this block are NEVER touched.
    ============================================================ */
+
+/* ===== TABLET / NARROW DESKTOP (960px) ===================================
+   Collapses the history-section two-column layout on the "Über den F12"
+   page before images become too cramped. At 768px the full mobile layout
+   takes over and handles everything else.
+   ========================================================================= */
+@media (max-width: 960px) {
+
+  .history-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Revert column order so text always comes first visually when stacked */
+  .history-section .history-images {
+    order: 1;
+  }
+
+  .history-section .history-text {
+    order: 0;
+  }
+
+  /* Give img-grid-3 two columns at this width so text is readable */
+  .img-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
 
 @media (max-width: 768px) {
 
