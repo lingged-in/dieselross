@@ -1958,3 +1958,141 @@ p {
   background: linear-gradient(to right, transparent, #C0C8DC, transparent);
   margin: 16px 0;
 }
+
+/* ===== PASSWORD OVERLAY ===== */
+
+#xp-pw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #3A6EA5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xp-pw-dialog {
+  background: #ECE9D8;
+  border: 2px solid #0A246A;
+  border-radius: 8px 8px 4px 4px;
+  width: 340px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+}
+
+.xp-pw-title-bar {
+  height: 30px;
+  background: linear-gradient(to bottom,
+    #5498F5 0%,
+    #2464D4 3%,
+    #1454C8 6%,
+    #1060D8 90%,
+    #0848A8 100%
+  );
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 6px;
+  user-select: none;
+}
+
+.xp-pw-title-icon {
+  color: white;
+  font-size: 13px;
+}
+
+.xp-pw-title-text {
+  flex: 1;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.xp-pw-body {
+  padding: 18px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.xp-pw-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.xp-pw-lock-icon {
+  font-size: 30px;
+  color: var(--fg);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.xp-pw-info-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.xp-pw-info-text strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.xp-pw-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.xp-pw-field label {
+  min-width: 72px;
+  text-align: right;
+  color: #000;
+}
+
+.xp-pw-field input {
+  flex: 1;
+  height: 22px;
+  border: 1px solid #7A7A9A;
+  border-top-color: #444;
+  border-left-color: #444;
+  background: white;
+  font-size: 12px;
+  padding: 0 4px;
+  font-family: inherit;
+  outline: none;
+}
+
+.xp-pw-field input:focus {
+  border-color: #0050A0;
+}
+
+.xp-pw-error {
+  font-size: 11px;
+  color: #C00000;
+  min-height: 14px;
+  text-align: center;
+}
+
+.xp-pw-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 20px 14px;
+  border-top: 1px solid #C0B8B0;
+  margin-top: 4px;
+}
+
+@keyframes xp-pw-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-7px); }
+  40%, 80% { transform: translateX(7px); }
+}
+
+.xp-pw-shake {
+  animation: xp-pw-shake 0.4s ease;
+}

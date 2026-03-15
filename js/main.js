@@ -2,6 +2,78 @@
    DIESELROSS.LI — Windows XP Interactive JS
    ============================================================ */
 
+// ---- Password Protection ----
+(function () {
+  var KEY  = 'drAuth';
+  var PASS = 'dieselross';
+
+  // Already authenticated – just make page visible and exit
+  if (sessionStorage.getItem(KEY) === '1') {
+    document.documentElement.style.visibility = '';
+    return;
+  }
+
+  // Build the XP-style password dialog
+  var overlay = document.createElement('div');
+  overlay.id = 'xp-pw-overlay';
+  overlay.innerHTML =
+    '<div class="xp-pw-dialog" role="dialog" aria-modal="true" aria-labelledby="xp-pw-title">' +
+      '<div class="xp-pw-title-bar">' +
+        '<span class="xp-pw-title-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>' +
+        '<span class="xp-pw-title-text" id="xp-pw-title">Dieselross.li – Anmelden</span>' +
+      '</div>' +
+      '<div class="xp-pw-body">' +
+        '<div class="xp-pw-info">' +
+          '<span class="xp-pw-lock-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>' +
+          '<div class="xp-pw-info-text">' +
+            '<strong>Passwort erforderlich</strong>' +
+            'Diese Website befindet sich im Aufbau und ist vorübergehend passwortgeschützt.' +
+          '</div>' +
+        '</div>' +
+        '<div class="xp-pw-field">' +
+          '<label for="xp-pw-input">Passwort:</label>' +
+          '<input type="password" id="xp-pw-input" autocomplete="current-password" />' +
+        '</div>' +
+        '<div class="xp-pw-error" id="xp-pw-error" aria-live="polite"></div>' +
+      '</div>' +
+      '<div class="xp-pw-buttons">' +
+        '<button class="xp-dialog-btn" id="xp-pw-ok">OK</button>' +
+      '</div>' +
+    '</div>';
+
+  document.body.appendChild(overlay);
+  document.documentElement.style.visibility = ''; // show overlay, keep rest hidden behind it
+
+  var input   = document.getElementById('xp-pw-input');
+  var errorEl = document.getElementById('xp-pw-error');
+  var okBtn   = document.getElementById('xp-pw-ok');
+  var dialog  = overlay.querySelector('.xp-pw-dialog');
+
+  input.focus();
+
+  function tryUnlock() {
+    if (input.value === PASS) {
+      sessionStorage.setItem(KEY, '1');
+      overlay.remove();
+    } else {
+      errorEl.textContent = 'Falsches Passwort. Bitte erneut versuchen.';
+      input.value = '';
+      input.focus();
+      dialog.classList.remove('xp-pw-shake');
+      void dialog.offsetWidth; // reflow to restart animation
+      dialog.classList.add('xp-pw-shake');
+      dialog.addEventListener('animationend', function () {
+        dialog.classList.remove('xp-pw-shake');
+      }, { once: true });
+    }
+  }
+
+  okBtn.addEventListener('click', tryUnlock);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') tryUnlock();
+  });
+})();
+
 // ---- System Tray Clock ----
 function updateClock() {
   const el = document.getElementById('xp-clock');
