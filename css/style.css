@@ -705,7 +705,8 @@ p {
   width: 40%;
 }
 
-/* Image placeholders */
+/* Image placeholders — aspect-ratio 4:3 so layout is preserved when real
+   <img> elements replace these divs (prevents cumulative layout shift) */
 .img-placeholder {
   background: linear-gradient(135deg, #C0C4CC 0%, #D0D4DC 50%, #B8BCC4 100%);
   border: 1px inset #A0A4AC;
@@ -716,7 +717,8 @@ p {
   color: #505458;
   text-align: center;
   padding: 12px 8px;
-  min-height: 130px;
+  aspect-ratio: 4 / 3;
+  min-height: 90px;
   position: relative;
 }
 
