@@ -99,7 +99,7 @@ document.querySelector('.xp-btn-close')?.addEventListener('click', function () {
   overlay.innerHTML =
     '<div class="xp-lightbox-window">' +
       '<div class="xp-lightbox-title-bar">' +
-        '<span class="xp-lightbox-title-icon" aria-hidden="true">🖼️</span>' +
+        '<span class="xp-lightbox-title-icon" aria-hidden="true"><i class="fa-solid fa-images"></i></span>' +
         '<span class="xp-lightbox-title-text" id="xp-lb-title">Bild</span>' +
         '<button class="xp-btn xp-btn-close xp-lightbox-close" title="Schließen (ESC)" aria-label="Lightbox schließen">&#10005;</button>' +
       '</div>' +

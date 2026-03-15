@@ -7,6 +7,7 @@
   <meta name="description" content="Die aufgerufene Seite wurde nicht gefunden. Kehren Sie zur Startseite von Dieselross.li zurück.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="404">
@@ -18,7 +19,7 @@
 
     <!-- Title Bar -->
     <div class="xp-title-bar">
-      <span class="xp-title-icon">⚠️</span>
+      <span class="xp-title-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
       <span class="xp-title-text">Seite nicht gefunden – Dieselross.li - Microsoft Internet Explorer</span>
       <div class="xp-window-controls">
         <button class="xp-btn xp-btn-min" title="Minimieren">&#8211;</button>
@@ -98,12 +99,12 @@
           <!-- XP-style error dialog -->
           <div class="xp-error-dialog" role="alert" aria-live="assertive">
             <div class="xp-error-dialog-title-bar">
-              <span class="xp-error-dialog-icon" aria-hidden="true">⚠️</span>
+              <span class="xp-error-dialog-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
               <span class="xp-error-dialog-title">Microsoft Internet Explorer</span>
               <button class="xp-btn xp-btn-close xp-error-dialog-close" title="Schließen" onclick="window.location='index.html'" aria-label="Schließen und zur Startseite">&#10005;</button>
             </div>
             <div class="xp-error-dialog-body">
-              <div class="xp-error-dialog-icon-large" aria-hidden="true">❌</div>
+              <div class="xp-error-dialog-icon-large" aria-hidden="true"><i class="fa-solid fa-circle-xmark"></i></div>
               <div class="xp-error-dialog-message">
                 <p><strong>Die Webseite konnte nicht gefunden werden.</strong></p>
                 <p>
@@ -172,12 +173,12 @@
     <div class="xp-taskbar-sep"></div>
     <div class="xp-taskbar-apps">
       <div class="xp-taskbar-app" data-page="404">
-        ⚠️ Seite nicht gefunden – Dieselross.li
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Seite nicht gefunden – Dieselross.li
       </div>
     </div>
     <div class="xp-systray">
-      <span class="xp-systray-icon">🔊</span>
-      <span class="xp-systray-icon">🌐</span>
+      <span class="xp-systray-icon" aria-hidden="true"><i class="fa-solid fa-volume-high"></i></span>
+      <span class="xp-systray-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
       <span class="xp-clock" id="xp-clock">00:00</span>
     </div>
   </div>
