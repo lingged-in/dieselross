@@ -14,7 +14,7 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 
 ## Medium Priority
 
-- [ ] 404 Page — `404.html` with full XP chrome, German error dialog (Req. 6)
+- [x] 404 Page — `404.html` with full XP chrome, German error dialog (Req. 6)
 - [ ] Impressum & Datenschutz — `impressum.html` skeleton, link in status bar (Req. 8)
 - [ ] Technical Specifications — research and fill Fendt F12GH specs, remove placeholder-tag spans (Req. 1)
 - [ ] Historical Content — write factual paragraph about Fendt production in Marktoberdorf 1950s (Req. 9)
@@ -32,6 +32,7 @@ Windows XP Luna theme, German language. Source: `docs/requirements.md`.
 - [x] SEO & Meta Tags
 - [x] Accessibility Improvements
 - [x] Gallery Lightbox
+- [x] 404 Page
 
 ## Notes
 
