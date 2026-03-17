@@ -956,6 +956,35 @@ p {
   max-height: unset;
 }
 
+.featured-img-real {
+  aspect-ratio: 16 / 9;
+  min-height: 160px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.featured-img-real img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.galerie-img-real {
+  aspect-ratio: 4 / 3;
+  max-height: 300px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.galerie-img-real img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ===== ÜBER DEN TRAKTOR PAGE ===== */
 
 .history-section {
